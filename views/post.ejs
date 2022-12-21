@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+<h1>Post</h1>
+
+<% for ( let i = 0 ; i < titles.length ; i++) { %>
+<div class="panel panel-default col-xs-6 col-md-8 well-sm">
+  <div class="panel-heading"><h4><%= titles[i] %></h4>
+    </div>
+    <div class="panel-body">
+    <p><%= items[i] %></p>
+    </div>
+</div>
+
+<% }; %>
+
+<%- include("partials/footer") -%>
+
+
+
