@@ -78,6 +78,6 @@ app.post('/compose', (req, res) => {
 
 
 
-aapp.listen(envPort || port, () =>
+app.listen(envPort || port, () =>
   console.log(`server is running on ${envPort} or ${port}`)
 );
