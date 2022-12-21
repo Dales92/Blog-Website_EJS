@@ -11,6 +11,8 @@ const titles = [];
 const items = [];
 
 const app = express();
+const port = 3000;
+const envPort = process.env.PORT;
 
 app.set('view engine', 'ejs');
 
@@ -76,6 +78,6 @@ app.post('/compose', (req, res) => {
 
 
 
-app.listen(3000 || process.env.PORT , function() {
-  console.log("Server started on port 3000");
-});
+aapp.listen(envPort || port, () =>
+  console.log(`server is running on ${envPort} or ${port}`)
+);
