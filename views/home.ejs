@@ -1,8 +1,26 @@
 <%- include("partials/header") -%>
 
-<h1>Home</h1>
+<div class="container-post">
+<div class="container-post panel panel-default ">
+  <div class="panel-heading"><h2>Home</h2>
+    </div>
+  <div class="panel-body">
+    <p><%= homeStartingContent %></p>
+    </div>
+</div>
+</div>
 
-<p><%= homeContent %></p>
 
+<% posts.forEach(element => { %>
+<div class="container-post ">
+<div class=" panel panel-default">
+  <div class="panel-heading"><h2><%= element.title %></h2>
+    </div>
+  <div class="panel-body">
+    <p><%= element.content %></p>
+    </div>
+</div>
+</div>
+  <% }); %>
 
 <%- include("partials/footer") -%>
